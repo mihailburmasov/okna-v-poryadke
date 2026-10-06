@@ -336,19 +336,21 @@ button { font: inherit; cursor: pointer; }
 .durability h2 .hl { color: var(--c-primary); }
 .durability__lead { font-size: 19px; color: var(--c-ink); margin-bottom: 14px; }
 .durability__note { font-size: 15px; font-weight: 700; color: var(--c-primary); margin: 0; }
-.durability__media { position: absolute; top: 0; right: 0; bottom: 0; width: 58%; }
+/* фото без обрезки (по пропорциям кадра), чтобы светлое пятно под подпись всегда было на месте */
+.durability__media { position: absolute; top: 0; right: 0; bottom: 0; aspect-ratio: 1274 / 410; }
 .durability__media img {
-  width: 100%; height: 100%; object-fit: cover; object-position: 100% 50%;
+  width: 100%; height: 100%; object-fit: cover;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.5) 14%, #000 30%);
           mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.5) 14%, #000 30%);
 }
 .durability__hand {
-  position: absolute; right: 7%; top: 18%; margin: 0;
+  /* центр светлого пятна на фото: 71,4% по ширине, 55% по высоте */
+  position: absolute; left: 71.4%; top: 55%; margin: 0; white-space: nowrap;
   font-family: "Caveat", cursive; font-weight: 600; font-size: 30px; line-height: 1.02;
-  color: var(--c-primary-dark); text-align: center; transform: rotate(-14deg);
+  color: var(--c-primary-dark); text-align: center; transform: translate(-50%, -50%) rotate(-12deg);
   text-shadow: 0 0 12px rgba(255, 255, 255, .9);
 }
-.durability__hand svg { display: block; margin: 4px auto 0 0; color: var(--c-primary); }
+.durability__hand svg { display: block; margin: 4px 0 0 18%; color: var(--c-primary); }
 
 /* ---------- FAQ ---------- */
 .faq { max-width: 860px; margin: 0 auto; }
@@ -467,7 +469,7 @@ body.modal-open { overflow: hidden; }
   .flow__item .flow__top::after { display: none; }
   .durability { display: block; }
   .durability__text { max-width: 680px; padding: 40px 0 28px; }
-  .durability__media { position: relative; width: auto; height: 300px; }
+  .durability__media { position: relative; width: 100%; height: auto; }
   .durability__media img { -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 22%); mask-image: linear-gradient(180deg, transparent 0%, #000 22%); }
 
   .header__contact { margin-left: auto; }
@@ -495,7 +497,7 @@ body.modal-open { overflow: hidden; }
   .flow__top { grid-row: span 2; margin: 0; }
   .flow__top svg { display: none; }
   .durability__lead { font-size: 17px; }
-  .durability__media { height: 210px; }
+  .durability__media { height: 210px; aspect-ratio: auto; }
   .durability__media img { object-position: 28% 50%; }
   .durability__hand { display: none; }
   body { font-size: 16px; padding-bottom: 72px; }
