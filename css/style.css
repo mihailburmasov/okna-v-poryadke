@@ -106,16 +106,8 @@ button { font: inherit; cursor: pointer; }
     radial-gradient(760px 380px at 28% 0%, rgba(214, 238, 240, .75), rgba(214, 238, 240, 0) 70%),
     linear-gradient(180deg, #f5fafb 0%, #ffffff 100%);
 }
-/* размытое продолжение фото под текстом — плавный переход, как в макете */
-.hero::before {
-  content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 38%;
-  background: url("../img/hero-bg.webp") 100% 60% / cover no-repeat;
-}
-.hero::after {
-  content: ""; position: absolute; inset: 0 40% 0 0;
-  background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.8) 45%, rgba(255,255,255,.45) 80%, rgba(255,255,255,.1) 100%);
-}
 .hero__content { position: relative; z-index: 2; max-width: 690px; }
+.hero__sub, .hero__features div { text-shadow: 0 0 10px #fff, 0 0 18px rgba(255, 255, 255, .9); }
 .hero h1 { font-size: clamp(32px, 3.6vw, 52px); margin-bottom: 20px; }
 .hero h1 .hl { display: block; color: var(--c-primary); }
 .hero__sub { font-size: 19px; line-height: 1.5; color: var(--c-ink); max-width: 640px; margin-bottom: 32px; }
@@ -129,8 +121,15 @@ button { font: inherit; cursor: pointer; }
 .hero__features b { display: block; color: var(--c-ink); font-size: 15px; line-height: 1.3; margin-bottom: 4px; }
 .hero__features span { display: block; color: var(--c-muted); font-size: 13px; line-height: 1.4; }
 
-.hero__media { position: absolute; top: 0; right: 0; bottom: 0; width: 40%; }
-.hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 0% 50%; }
+/* фото целиком: высота = высоте экрана, ширина по пропорциям кадра.
+   Левая часть (небо, море) плавно растворяется в фон — переход как в макете;
+   рама окна (~35% ширины кадра) и рука остаются чёткими */
+.hero__media { position: absolute; top: 0; right: 0; bottom: 0; aspect-ratio: 1672 / 941; }
+.hero__media img {
+  width: 100%; height: 100%; object-fit: cover;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.18) 14%, rgba(0,0,0,.42) 26%, rgba(0,0,0,.7) 32%, #000 35%);
+          mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.18) 14%, rgba(0,0,0,.42) 26%, rgba(0,0,0,.7) 32%, #000 35%);
+}
 .hero__place {
   position: absolute; right: 28px; bottom: 26px;
   display: flex; align-items: center; gap: 12px;
@@ -142,7 +141,7 @@ button { font: inherit; cursor: pointer; }
 .hero__place b { display: block; color: var(--c-primary); font-weight: 800; }
 .hero__crimea { color: #49b0ba; }
 .hero__note {
-  position: absolute; z-index: 3; left: calc(60% - 50px); top: 36%; margin: 0;
+  position: absolute; z-index: 3; left: calc(35% - 40px); top: 36%; margin: 0;
   font-family: "Caveat", cursive; font-weight: 600; font-size: 27px; line-height: 1.05;
   color: var(--c-primary-dark); text-align: center; transform: rotate(-10deg);
 }
@@ -421,15 +420,19 @@ body.modal-open { overflow: hidden; }
 
 /* ---------- Адаптив ---------- */
 @media (max-width: 1400px) {
+  .hero__media { right: -40px; }
+  .hero__note { display: none; }
+  .hero__content { max-width: 660px; }
+}
+@media (max-width: 1240px) {
+  .hero { padding-bottom: 40px; }
+  .hero__content { max-width: 680px; }
+  .hero__media { position: relative; right: auto; aspect-ratio: auto; width: auto; height: 400px; margin: 36px 20px 0; border-radius: 20px; overflow: hidden; }
+  .hero__media img { -webkit-mask-image: none; mask-image: none; object-position: 72% 45%; }
   .hero__note { display: none; }
 }
 @media (max-width: 1180px) {
   .nav { display: none; }
-  .hero { padding-bottom: 40px; }
-  .hero::before, .hero::after { display: none; }
-  .hero__media img { object-position: 30% 40%; }
-  .hero__content { max-width: 680px; }
-  .hero__media { position: relative; width: auto; height: 400px; margin: 36px 20px 0; border-radius: 20px; overflow: hidden; }
 
   .header__contact { margin-left: auto; }
 }
