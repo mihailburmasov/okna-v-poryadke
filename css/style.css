@@ -291,15 +291,6 @@ button { font: inherit; cursor: pointer; }
 .price-foot b { color: var(--c-ink); }
 
 /* ---------- Ремонт или замена ---------- */
-.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.compare__col { border-radius: var(--radius); padding: 32px; background: #fff; border: 1px solid var(--c-line); }
-.compare__col--good { border: 2px solid var(--c-primary); box-shadow: var(--shadow); position: relative; }
-.compare__tag { position: absolute; top: -14px; left: 28px; background: var(--c-primary); color: #fff; font-size: 13px; font-weight: 800; padding: 5px 12px; border-radius: 999px; }
-.compare__col h3 { font-size: 22px; }
-.compare__row { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--c-line); font-size: 16px; }
-.compare__row:last-child { border-bottom: 0; }
-.compare__row b { color: var(--c-ink); text-align: right; }
-.compare__col--good .compare__row b { color: var(--c-primary); }
 
 /* ---------- Шаги ---------- */
 
@@ -364,7 +355,7 @@ button { font: inherit; cursor: pointer; }
 .durability__hand svg { display: block; margin: 4px 0 0 18%; color: var(--c-primary); }
 
 /* ---------- FAQ ---------- */
-.faq { max-width: 860px; margin: 0 auto; }
+.faq { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; align-items: start; }
 .faq details { background: #fff; border: 1px solid var(--c-line); border-radius: 14px; margin-bottom: 12px; }
 .faq summary {
   list-style: none; cursor: pointer; padding: 20px 56px 20px 24px; position: relative;
@@ -417,7 +408,6 @@ button { font: inherit; cursor: pointer; }
 .footer-bottom-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .footer-bottom-links a { color: #c9d3e3; opacity: .7; }
 .footer-bottom-links a:hover { opacity: 1; color: #fff; }
-.footer__disclaimer { width: 100%; opacity: .6; font-size: 12px; }
 
 /* ---------- Модальное окно ---------- */
 .modal { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; padding: 16px; }
@@ -542,10 +532,9 @@ body.modal-open { overflow: hidden; }
   .quiz__final { grid-template-columns: 1fr; }
   .price-table td { padding: 14px 16px; font-size: 15px; }
   .price-foot { grid-template-columns: 1fr; padding: 18px; }
-  .compare { grid-template-columns: 1fr; gap: 28px; }
-  .compare__col { padding: 24px 20px; }
   .why__grid { grid-template-columns: 1fr; gap: 20px; }
   .footer__top { grid-template-columns: 1fr; }
+  .faq { grid-template-columns: 1fr; }
   .faq summary { padding: 16px 48px 16px 18px; font-size: 16px; }
   .faq details > div { padding: 0 18px 16px; }
 
