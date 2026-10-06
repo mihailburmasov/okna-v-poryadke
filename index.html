@@ -64,6 +64,8 @@
   <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="i-snow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1L19.1 4.9"/></symbol>
   <symbol id="i-logo" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><rect x="5" y="3" width="30" height="31" rx="2"/><rect x="15" y="8" width="15" height="21" rx="1"/><path d="M10 3v31M2 37.5h36" stroke-linecap="round"/></symbol>
+  <symbol id="i-doc-ok" viewBox="0 0 24 24" fill="none" stroke="#0f7f8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 00-1 1v16a1 1 0 001 1h12a1 1 0 001-1V8z"/><path d="M14 3v5h5M9 14.5l2 2 4-4"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="#0f7f8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19M6.5 15h4"/></symbol>
   <symbol id="i-phone-call" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z" fill="currentColor"/><path d="M14.5 2.5a7 7 0 017 7M14.5 6a3.5 3.5 0 013.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
   <symbol id="i-wrench" viewBox="0 0 24 24"><path fill="currentColor" d="M21.7 6.3a.8.8 0 00-1.3-.3l-2.9 2.9-2.3-.4-.4-2.3 2.9-2.9a.8.8 0 00-.3-1.3 6 6 0 00-7.8 7.4L2.9 16a2.9 2.9 0 004.1 4.1l6.6-6.6a6 6 0 008.1-7.2z"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
@@ -253,30 +255,6 @@
       <span class="chip">Оклейка бронеплёнкой</span>
       <span class="chip">Замена петель</span>
       <span class="chip">Профилактика и смазка</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ СЕЗОННОЕ ПРЕДЛОЖЕНИЕ ============ -->
-<section class="section" style="padding-bottom:0">
-  <div class="container">
-    <div class="season reveal">
-      <div>
-        <span class="eyebrow" style="color:#ffd2b0">Подготовка к отопительному сезону</span>
-        <h2>Обслуживание окна «под зиму»</h2>
-        <ul class="season__list">
-          <li><svg width="22" height="22" aria-hidden="true"><use href="#i-check-w"/></svg>Перевод фурнитуры на зимний режим</li>
-          <li><svg width="22" height="22" aria-hidden="true"><use href="#i-check-w"/></svg>Регулировка прижима и провисания створки</li>
-          <li><svg width="22" height="22" aria-hidden="true"><use href="#i-check-w"/></svg>Чистка и смазка всей фурнитуры</li>
-          <li><svg width="22" height="22" aria-hidden="true"><use href="#i-check-w"/></svg>Проверка уплотнителя и швов — скажем честно, если менять не нужно</li>
-        </ul>
-      </div>
-      <div class="season__price">
-        <span>за одну створку</span>
-        <b>от 900 ₽</b>
-        <small>занимает 20–30 минут</small>
-        <button class="btn btn--accent btn--block" type="button" data-open-form data-problem="Обслуживание «под зиму»" data-form-title="Подготовить окна к зиме">Записаться</button>
-      </div>
     </div>
   </div>
 </section>
@@ -493,17 +471,29 @@
 </section>
 
 <!-- ============ КАК РАБОТАЕМ ============ -->
-<section class="section section--soft" id="kak-rabotaem">
+<section class="section section--soft section--flow" id="kak-rabotaem">
   <div class="container">
-    <div class="section__head">
-      <span class="eyebrow">Как мы работаем</span>
-      <h2>От заявки до тёплого окна — 4 шага</h2>
+    <div class="section__head"><h2>Как проходит работа</h2></div>
+    <ol class="flow">
+      <li class="flow__item reveal"><div class="flow__top"><span class="flow__num">1</span><svg aria-hidden="true"><use href="#i-doc"/></svg></div><h3>Заявка</h3><p>Оставьте заявку на&nbsp;сайте или позвоните по&nbsp;телефону</p></li>
+      <li class="flow__item reveal"><div class="flow__top"><span class="flow__num">2</span><svg aria-hidden="true"><use href="#i-search"/></svg></div><h3>Диагностика</h3><p>Мастер приедет, осмотрит окна и&nbsp;найдёт причину неисправности</p></li>
+      <li class="flow__item reveal"><div class="flow__top"><span class="flow__num">3</span><svg aria-hidden="true"><use href="#i-doc-ok"/></svg></div><h3>Согласование стоимости</h3><p>Согласуем объём работ и&nbsp;фиксируем цену до&nbsp;начала ремонта</p></li>
+      <li class="flow__item reveal"><div class="flow__top"><span class="flow__num">4</span><svg aria-hidden="true"><use href="#i-tools"/></svg></div><h3>Ремонт</h3><p>Выполняем работы аккуратно и&nbsp;убираем за&nbsp;собой</p></li>
+      <li class="flow__item reveal"><div class="flow__top"><span class="flow__num">5</span><svg aria-hidden="true"><use href="#i-card"/></svg></div><h3>Оплата после выполнения</h3><p>Вы оплачиваете работу удобным способом, когда всё готово</p></li>
+    </ol>
+  </div>
+
+  <div class="durability">
+    <div class="container">
+      <div class="durability__text reveal">
+        <h2>Ежедневно оконная фурнитура удерживает створку весом <span class="hl">в&nbsp;десятки килограммов.</span></h2>
+        <p class="durability__lead">Представьте её состояние после 5–10&nbsp;лет эксплуатации без обслуживания.</p>
+        <p class="durability__note">Мы продлеваем жизнь вашим окнам — во&nbsp;благо вам и&nbsp;вашему дому.</p>
+      </div>
     </div>
-    <div class="steps">
-      <div class="step reveal"><h3>Заявка или звонок</h3><p>Оставьте телефон на сайте или позвоните. Уточним, что случилось, и договоримся о времени.</p><span class="step__time">телефон или Telegram</span></div>
-      <div class="step reveal"><h3>Бесплатная диагностика</h3><p>Мастер приезжает в удобное время, проверяет окна и находит причину.</p><span class="step__time">0 ₽</span></div>
-      <div class="step reveal"><h3>Фиксируем цену</h3><p>Предлагаем оптимальный вариант и согласуем стоимость до начала работ. Без неожиданных доплат.</p><span class="step__time">до начала работ</span></div>
-      <div class="step reveal"><h3>Ремонт и гарантия</h3><p>Делаем ремонт, убираем за собой. Оплата — после выполнения работ, на работы даём гарантию.</p><span class="step__time">обычно 1–2 часа</span></div>
+    <div class="durability__media">
+      <img src="img/furnitura-banner.webp" width="1274" height="410" alt="Петля и фурнитура открытой пластиковой створки" loading="lazy">
+      <p class="durability__hand" aria-hidden="true">Своевременный<br>ремонт экономит<br>ваши деньги!<svg width="64" height="34" viewBox="0 0 64 34"><path d="M58 4C54 18 38 27 12 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M20 16l-9 8 10 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
     </div>
   </div>
 </section>
@@ -532,18 +522,21 @@
 </section>
 
 <!-- ============ ОТЗЫВЫ ============
-     Блок скрыт: публиковать только реальные отзывы (Яндекс Карты, 2ГИС) с согласия клиентов.
-     Шаблон карточки:
-<section class="section section--soft" id="otzyvy">
+     Блок готов по макету, но скрыт: публиковать только реальные отзывы (Яндекс Карты, 2ГИС, Авито)
+     с согласия клиентов. Выдуманные отзывы — недостоверная реклама (38-ФЗ, ст. 5), их ловит модерация Директа.
+     Чтобы включить: снять комментарий, заполнить карточки, вернуть пункт «Отзывы» в меню шапки и подвала.
+<section class="section" id="otzyvy">
   <div class="container">
-    <div class="section__head"><span class="eyebrow">Отзывы</span><h2>Что говорят клиенты</h2></div>
+    <div class="section__head section__head--row"><h2>Отзывы наших клиентов</h2><a class="link-more" href="ССЫЛКА_НА_ВСЕ_ОТЗЫВЫ" target="_blank" rel="noopener">Все отзывы →</a></div>
     <div class="reviews">
-      <article class="problem"><div class="problem__body">
-        <h3>Имя, район</h3>
-        <p class="problem__symptoms">Дата · Что делали</p>
-        <p>Текст отзыва</p>
-        <a href="ССЫЛКА_НА_ОТЗЫВ" target="_blank" rel="noopener">Отзыв на Яндекс Картах</a>
-      </div></article>
+      <article class="review reveal">
+        <div class="review__head">
+          <span class="review__ava" aria-hidden="true">М</span>
+          <div><b class="review__name">Имя, первая буква фамилии</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+        </div>
+        <p class="review__text">Текст отзыва дословно, как на площадке</p>
+        <a class="review__date" href="ССЫЛКА_НА_ОТЗЫВ" target="_blank" rel="noopener">Дата · Яндекс Карты</a>
+      </article>
     </div>
   </div>
 </section>
