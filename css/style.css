@@ -83,10 +83,10 @@ button { font: inherit; cursor: pointer; }
 .logo__mark { width: 40px; height: 40px; flex-shrink: 0; }
 .logo__name { display: block; font-weight: 800; font-size: 19px; line-height: 1.1; }
 .logo__sub { display: block; font-size: 12px; color: var(--c-muted); font-weight: 600; }
-.nav { display: flex; gap: 22px; margin-left: auto; }
+.nav { display: flex; gap: 22px; margin: 0 auto; }
 .nav a { color: var(--c-ink); text-decoration: none; font-weight: 600; font-size: 15px; white-space: nowrap; }
 .nav a:hover { color: var(--c-primary); }
-.header__contact { display: flex; align-items: center; gap: 16px; margin-left: 8px; }
+.header__contact { display: flex; align-items: center; gap: 16px; }
 .header__phone { text-align: right; text-decoration: none; color: var(--c-ink); white-space: nowrap; }
 .header__phone b { display: block; font-size: 19px; font-weight: 800; }
 .header__phone small { display: block; font-size: 12px; color: var(--c-muted); font-weight: 600; }
@@ -205,27 +205,27 @@ button { font: inherit; cursor: pointer; }
 .trust__item span { font-size: 14px; color: var(--c-muted); line-height: 1.35; display: block; }
 
 /* ---------- Проблемы / услуги ---------- */
-.problems { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.problems { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
 .problem {
   display: flex; flex-direction: column;
   background: #fff; border: 1px solid var(--c-line); border-radius: var(--radius);
   overflow: hidden; transition: transform .2s ease, box-shadow .2s ease;
 }
 .problem:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-.problem__img { aspect-ratio: 4 / 3; overflow: hidden; background: var(--c-bg-soft); position: relative; }
+.problem__img { aspect-ratio: 16 / 10; overflow: hidden; background: var(--c-bg-soft); position: relative; }
 .problem__img img { width: 100%; height: 100%; object-fit: cover; }
 .problem__price {
-  position: absolute; left: 14px; bottom: 14px;
-  background: #fff; color: var(--c-ink); font-weight: 800; font-size: 15px;
-  padding: 6px 12px; border-radius: 999px; box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  position: absolute; left: 12px; bottom: 12px;
+  background: #fff; color: var(--c-ink); font-weight: 800; font-size: 13px;
+  padding: 4px 10px; border-radius: 999px; box-shadow: 0 4px 12px rgba(0,0,0,.12);
 }
-.problem__body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
-.problem__body h3 { margin-bottom: 8px; }
-.problem__symptoms { font-size: 15px; color: var(--c-muted); margin-bottom: 12px; }
-.problem__list { list-style: none; padding: 0; margin: 0 0 18px; font-size: 15px; }
-.problem__list li { position: relative; padding-left: 20px; margin-bottom: 4px; }
-.problem__list li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: var(--c-primary); }
-.problem .btn { margin-top: auto; }
+.problem__body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; }
+.problem__body h3 { font-size: 17px; margin-bottom: 6px; }
+.problem__symptoms { font-size: 13px; line-height: 1.45; color: var(--c-muted); margin-bottom: 10px; }
+.problem__list { list-style: none; padding: 0; margin: 0 0 14px; font-size: 13px; line-height: 1.45; }
+.problem__list li { position: relative; padding-left: 16px; margin-bottom: 3px; }
+.problem__list li::before { content: ""; position: absolute; left: 2px; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--c-primary); }
+.problem .btn { margin-top: auto; min-height: 42px; padding: 9px 14px; font-size: 14px; border-width: 1.5px; }
 
 .services-more { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .chip { display: inline-block; padding: 8px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--c-line); font-size: 14px; font-weight: 600; color: var(--c-ink); }
@@ -476,7 +476,7 @@ body.modal-open { overflow: hidden; }
 }
 @media (max-width: 1024px) {
   .form-card { max-width: 560px; width: 100%; }
-  .problems { grid-template-columns: repeat(2, 1fr); }
+  .problems { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .trust__grid { grid-template-columns: repeat(2, 1fr); }
   .quiz { grid-template-columns: 1fr; }
   .quiz__master { display: none; }
