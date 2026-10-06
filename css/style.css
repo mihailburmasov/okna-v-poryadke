@@ -107,7 +107,22 @@ button { font: inherit; cursor: pointer; }
     linear-gradient(180deg, #f5fafb 0%, #ffffff 100%);
 }
 .hero__content { position: relative; z-index: 2; max-width: 690px; }
-@media (min-width: 1241px) { .hero { display: flex; align-items: center; min-height: 500px; } .hero > .container { width: 100%; } }
+/* Десктоп: первый экран + полоса преимуществ занимают ровно высоту окна.
+   Высота первого экрана задаёт ширину фото (пропорции кадра 1672×941), поэтому
+   .hero — контейнер размеров, а фото считается в cqh/cqw. Если фото при этом
+   заезжает рамой под текст, сдвигаем его вправо (--shift): рама (~35% кадра)
+   остаётся правее колонки текста (край контента + 690px + 40px отступа). */
+@media (min-width: 1241px) {
+  .first-screen { display: flex; flex-direction: column; min-height: calc(100svh - var(--header-h)); }
+  .first-screen .hero { flex: 1 0 500px; max-height: 820px; container-type: size; display: flex; align-items: center; padding: 0; }
+  .hero > .container { width: 100%; padding-top: 40px; padding-bottom: 40px; }
+  .hero__media { top: 0; bottom: auto; height: 100cqh; }
+  .hero__media {
+    --shift: max(0px, calc(max(0px, (100cqw - 1400px) / 2) + 750px - 100cqw + 100cqh * 1.155));
+    width: calc(100cqh * 1.7768); aspect-ratio: auto; right: calc(-1 * var(--shift));
+  }
+  .hero__place { right: calc(28px + var(--shift)); }
+}
 .hero__sub { text-shadow: 0 0 10px #fff, 0 0 18px rgba(255, 255, 255, .9); }
 .hero h1 { font-size: clamp(32px, 3.6vw, 52px); margin-bottom: 20px; }
 .hero h1 .hl { display: block; color: var(--c-primary); }
@@ -443,7 +458,6 @@ body.modal-open { overflow: hidden; }
 
 /* ---------- Адаптив ---------- */
 @media (max-width: 1400px) {
-  .hero__media { right: -40px; }
   .hero__note { display: none; }
   .hero__content { max-width: 660px; }
 }
