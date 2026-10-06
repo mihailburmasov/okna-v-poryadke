@@ -133,7 +133,7 @@ button { font: inherit; cursor: pointer; }
 .hero__place b { display: block; color: var(--c-primary); font-weight: 800; }
 .hero__crimea { color: #49b0ba; }
 .hero__note {
-  position: absolute; z-index: 3; left: calc(60% - 70px); top: 36%; margin: 0;
+  position: absolute; z-index: 3; left: calc(60% - 50px); top: 36%; margin: 0;
   font-family: "Caveat", cursive; font-weight: 600; font-size: 27px; line-height: 1.05;
   color: var(--c-primary-dark); text-align: center; transform: rotate(-10deg);
 }
@@ -411,17 +411,18 @@ body.modal-open { overflow: hidden; }
 }
 
 /* ---------- Адаптив ---------- */
-@media (max-width: 1360px) {
+@media (max-width: 1400px) {
   .hero__note { display: none; }
 }
 @media (max-width: 1180px) {
   .nav { display: none; }
+  .hero { padding-bottom: 40px; }
+  .hero__content { max-width: 680px; }
+  .hero__media { position: relative; width: auto; height: 400px; margin: 36px 20px 0; border-radius: 20px; overflow: hidden; }
+
   .header__contact { margin-left: auto; }
 }
 @media (max-width: 1024px) {
-  .hero { padding-bottom: 40px; }
-  .hero__content { max-width: 680px; }
-  .hero__media { position: relative; width: auto; height: 380px; margin: 36px 20px 0; border-radius: 20px; overflow: hidden; }
   .form-card { max-width: 560px; width: 100%; }
   .problems { grid-template-columns: repeat(2, 1fr); }
   .trust__grid { grid-template-columns: repeat(2, 1fr); }
