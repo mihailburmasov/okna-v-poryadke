@@ -109,14 +109,11 @@ button { font: inherit; cursor: pointer; }
 /* размытое продолжение фото под текстом — плавный переход, как в макете */
 .hero::before {
   content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 38%;
-  background: url("../img/hero-bg.webp") 50% 50% / cover no-repeat;
-  opacity: .75;
-  -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.6) 50%, #000 100%);
-          mask-image: linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.6) 50%, #000 100%);
+  background: url("../img/hero-bg.webp") 100% 60% / cover no-repeat;
 }
 .hero::after {
   content: ""; position: absolute; inset: 0 40% 0 0;
-  background: linear-gradient(90deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.72) 50%, rgba(255,255,255,.3) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.8) 45%, rgba(255,255,255,.45) 80%, rgba(255,255,255,.1) 100%);
 }
 .hero__content { position: relative; z-index: 2; max-width: 690px; }
 .hero h1 { font-size: clamp(32px, 3.6vw, 52px); margin-bottom: 20px; }
@@ -133,13 +130,7 @@ button { font: inherit; cursor: pointer; }
 .hero__features span { display: block; color: var(--c-muted); font-size: 13px; line-height: 1.4; }
 
 .hero__media { position: absolute; top: 0; right: 0; bottom: 0; width: 40%; }
-/* белая рама окна на стыке фото и фона */
-.hero__media::before {
-  content: ""; position: absolute; z-index: 1; top: 0; bottom: 0; left: 0; width: 58px;
-  background: linear-gradient(90deg, #d9e0e3 0, #f7f9fa 10%, #ffffff 38%, #e6ecee 62%, #fbfcfc 70%, #ffffff 86%, #c9d2d6 100%);
-  box-shadow: 8px 0 18px rgba(18, 38, 58, .14), -6px 0 16px rgba(18, 38, 58, .06);
-}
-.hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; }
+.hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 0% 50%; }
 .hero__place {
   position: absolute; right: 28px; bottom: 26px;
   display: flex; align-items: center; gap: 12px;
@@ -435,7 +426,8 @@ body.modal-open { overflow: hidden; }
 @media (max-width: 1180px) {
   .nav { display: none; }
   .hero { padding-bottom: 40px; }
-  .hero::before, .hero::after, .hero__media::before { display: none; }
+  .hero::before, .hero::after { display: none; }
+  .hero__media img { object-position: 30% 40%; }
   .hero__content { max-width: 680px; }
   .hero__media { position: relative; width: auto; height: 400px; margin: 36px 20px 0; border-radius: 20px; overflow: hidden; }
 
