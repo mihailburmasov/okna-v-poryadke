@@ -403,10 +403,10 @@ button { font: inherit; cursor: pointer; }
 .cta-band__phone:hover b { color: var(--c-primary); }
 
 /* ---------- Подвал ---------- */
-.footer { background: var(--c-deep); color: #b3d3d7; padding: 48px 0 28px; font-size: 15px; }
-.footer__top { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 28px 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.footer { background: var(--c-deep); color: #b3d3d7; padding: 30px 0 18px; font-size: 15px; }
+.footer__top { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 16px 40px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,.1); }
 .footer__nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 26px; }
-.footer__contacts { grid-column: 1 / -1; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); }
+.footer__contacts { grid-column: 1 / -1; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.1); }
 .footer .footer__contacts ul { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 36px; }
 .footer__nav a { font-weight: 600; white-space: nowrap; }
 .footer__phone-row { display: flex; align-items: center; gap: 14px; }
@@ -420,7 +420,7 @@ button { font: inherit; cursor: pointer; }
 .footer a { color: #d3e8ea; text-decoration: none; }
 .footer a:hover { color: #fff; }
 .footer__phone { font-size: 22px; font-weight: 800; color: #fff !important; }
-.footer__bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding-top: 24px; font-size: 13px; }
+.footer__bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding-top: 16px; font-size: 13px; }
 .footer-bottom-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .footer-bottom-links a { color: #d3e8ea; opacity: .7; }
 .footer-bottom-links a:hover { opacity: 1; color: #fff; }
