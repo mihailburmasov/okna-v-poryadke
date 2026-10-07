@@ -7,7 +7,8 @@
   --c-primary-soft: #e3f2f3;
   --c-accent: #ff7a1a;
   --c-accent-dark: #e8630a;
-  --c-ink: #12263a;
+  --c-ink: #2a4a5e;
+  --c-deep: #1a5f6a;       /* фон плашки расчёта и подвала */
   --c-text: #33415a;
   --c-muted: #6b7a90;
   --c-line: #dfe6f0;
@@ -233,7 +234,7 @@ button { font: inherit; cursor: pointer; }
 
 /* ---------- Квиз ---------- */
 .quiz { display: grid; grid-template-columns: 340px 1fr; background: #fff; border-radius: 24px; box-shadow: var(--shadow); overflow: hidden; }
-.quiz__aside { background: var(--c-ink); color: #c9d3e3; padding: 36px 32px; display: flex; flex-direction: column; }
+.quiz__aside { background: var(--c-deep); color: #d3e8ea; padding: 36px 32px; display: flex; flex-direction: column; }
 .quiz__aside h2 { color: #fff; font-size: 28px; }
 .quiz__aside ul { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 12px; font-size: 15px; }
 .quiz__aside li { display: flex; gap: 10px; }
@@ -395,18 +396,18 @@ button { font: inherit; cursor: pointer; }
 .cta-band__phone:hover b { color: var(--c-primary); }
 
 /* ---------- Подвал ---------- */
-.footer { background: var(--c-ink); color: #9fb0c8; padding: 48px 0 28px; font-size: 15px; }
+.footer { background: var(--c-deep); color: #b3d3d7; padding: 48px 0 28px; font-size: 15px; }
 .footer__top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,.1); }
 .footer .logo { color: #fff; }
-.footer .logo__sub { color: #9fb0c8; }
+.footer .logo__sub { color: #b3d3d7; }
 .footer h4 { color: #fff; font-size: 16px; margin-bottom: 12px; }
 .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
-.footer a { color: #c9d3e3; text-decoration: none; }
+.footer a { color: #d3e8ea; text-decoration: none; }
 .footer a:hover { color: #fff; }
 .footer__phone { font-size: 22px; font-weight: 800; color: #fff !important; }
 .footer__bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding-top: 24px; font-size: 13px; }
 .footer-bottom-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
-.footer-bottom-links a { color: #c9d3e3; opacity: .7; }
+.footer-bottom-links a { color: #d3e8ea; opacity: .7; }
 .footer-bottom-links a:hover { opacity: 1; color: #fff; }
 
 /* ---------- Модальное окно ---------- */
