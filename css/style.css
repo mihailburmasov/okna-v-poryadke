@@ -408,6 +408,7 @@ button { font: inherit; cursor: pointer; }
 .footer__contacts { grid-column: 1 / -1; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); }
 .footer .footer__contacts ul { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 36px; }
 .footer__nav a { font-weight: 600; white-space: nowrap; }
+.footer__phone-row { display: flex; align-items: center; gap: 14px; }
 .footer__tg { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #229ed9; color: #fff !important; }
 .footer__tg:hover { background: #1b87bb; }
 .footer__tg svg { margin-left: -2px; }
