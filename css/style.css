@@ -457,6 +457,14 @@ body.modal-open { overflow: hidden; }
   .header__contact { gap: 12px; }
   .header__contact .btn { white-space: nowrap; }
 }
+@media (max-width: 1320px) {
+  /* 8 пунктов меню на узком десктопе */
+  .header__inner { gap: 12px; }
+  .nav { gap: 11px; }
+  .nav a { font-size: 13.5px; }
+  .header__phone-icon { display: none; }
+  .header__phone b { font-size: 17px; }
+}
 @media (max-width: 1240px) {
   .hero { padding-bottom: 40px; }
   .hero__content { max-width: 680px; }
@@ -539,6 +547,7 @@ body.modal-open { overflow: hidden; }
   .price-table td { padding: 14px 16px; font-size: 15px; }
   .price-foot { grid-template-columns: 1fr; padding: 18px; }
   .why__grid { grid-template-columns: 1fr; gap: 20px; }
+  .reviews { grid-template-columns: 1fr; gap: 16px; }
   .why__photo { aspect-ratio: 4 / 5; }
   .footer__top { grid-template-columns: 1fr; }
   .faq { grid-template-columns: 1fr; }

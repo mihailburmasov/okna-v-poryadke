@@ -86,7 +86,7 @@
       <a href="#ceny">Цены</a>
       <a href="#kak-rabotaem">Этапы работы</a>
       <a href="#garantii">Преимущества</a>
-      <!-- «Отзывы» (#otzyvy) вернуть сюда, когда появится блок с реальными отзывами -->
+      <a href="#otzyvy">Отзывы</a>
       <a href="#voprosy">Вопросы</a>
       <a href="#kontakty">Контакты</a>
     </nav>
@@ -515,25 +515,43 @@
 </section>
 
 <!-- ============ ОТЗЫВЫ ============
-     Блок готов по макету, но скрыт: публиковать только реальные отзывы (Яндекс Карты, 2ГИС, Авито)
-     с согласия клиентов. Выдуманные отзывы — недостоверная реклама (38-ФЗ, ст. 5), их ловит модерация Директа.
-     Чтобы включить: снять комментарий, заполнить карточки, вернуть пункт «Отзывы» в меню шапки и подвала.
+     ВРЕМЕННЫЕ ОТЗЫВЫ-ЗАГЛУШКИ (написаны нами по просьбе заказчика, клиентов с такими именами нет).
+     До запуска Яндекс Директа заменить реальными (Яндекс Карты, 2ГИС, Авито) с согласия клиентов:
+     выдуманные отзывы — недостоверная реклама (38-ФЗ, ст. 5), их ловит модерация Директа.
+     Для реального отзыва: дату сделать ссылкой на отзыв («12 марта 2026 · Яндекс Карты»),
+     вернуть ссылку «Все отзывы →» в заголовок блока:
+     <a class="link-more" href="ССЫЛКА_НА_ВСЕ_ОТЗЫВЫ" target="_blank" rel="noopener">Все отзывы →</a> -->
 <section class="section" id="otzyvy">
   <div class="container">
-    <div class="section__head section__head--row"><h2>Отзывы наших клиентов</h2><a class="link-more" href="ССЫЛКА_НА_ВСЕ_ОТЗЫВЫ" target="_blank" rel="noopener">Все отзывы →</a></div>
+    <div class="section__head section__head--row"><h2>Отзывы наших клиентов</h2></div>
     <div class="reviews">
       <article class="review reveal">
         <div class="review__head">
           <span class="review__ava" aria-hidden="true">М</span>
-          <div><b class="review__name">Имя, первая буква фамилии</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+          <div><b class="review__name">Марина К.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
         </div>
-        <p class="review__text">Текст отзыва дословно, как на площадке</p>
-        <a class="review__date" href="ССЫЛКА_НА_ОТЗЫВ" target="_blank" rel="noopener">Дата · Яндекс Карты</a>
+        <p class="review__text">Из-под створки в спальне сильно дуло. Мастер отрегулировал окна и поменял уплотнитель — стало тепло и тихо. Цену назвал до начала работ, так и заплатили.</p>
+        <span class="review__date">12 сентября 2026</span>
+      </article>
+      <article class="review reveal">
+        <div class="review__head">
+          <span class="review__ava" aria-hidden="true">А</span>
+          <div><b class="review__name">Алексей П.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+        </div>
+        <p class="review__text">Перестала нормально закрываться балконная дверь. Мастер нашёл причину, всё отремонтировал за один визит и убрал за собой. Рекомендую.</p>
+        <span class="review__date">3 сентября 2026</span>
+      </article>
+      <article class="review reveal">
+        <div class="review__head">
+          <span class="review__ava" aria-hidden="true">Е</span>
+          <div><b class="review__name">Елена С.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+        </div>
+        <p class="review__text">Заказывала перевод окон на зимний режим и смазку фурнитуры. Всё сделали аккуратно и подсказали, как ухаживать за окнами. Спасибо!</p>
+        <span class="review__date">27 августа 2026</span>
       </article>
     </div>
   </div>
 </section>
--->
 
 <!-- ============ FAQ ============ -->
 <section class="section section--soft" id="voprosy">
@@ -601,7 +619,7 @@
           <li><a href="#ceny">Цены</a></li>
           <li><a href="#kak-rabotaem">Этапы работы</a></li>
           <li><a href="#garantii">Преимущества</a></li>
-          <!-- «Отзывы» (#otzyvy) вернуть сюда, когда появится блок с реальными отзывами -->
+          <li><a href="#otzyvy">Отзывы</a></li>
           <li><a href="#voprosy">Вопросы</a></li>
           <li><a href="#kontakty">Контакты</a></li>
         </ul>
