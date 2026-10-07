@@ -201,7 +201,8 @@ button { font: inherit; cursor: pointer; }
 .trust { padding: 28px 0; border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); background: #fff; }
 .trust__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .trust__item { display: flex; gap: 14px; align-items: center; }
-.trust__icon { width: 48px; height: 48px; border-radius: 12px; background: var(--c-primary-soft); display: grid; place-items: center; flex-shrink: 0; }
+.trust__icon { display: grid; place-items: center; flex-shrink: 0; }
+.trust__icon svg, .why__item svg { width: 46px; height: 46px; }
 .trust__item b { display: block; color: var(--c-ink); font-size: 16px; line-height: 1.25; }
 .trust__item span { font-size: 14px; color: var(--c-muted); line-height: 1.35; display: block; }
 
