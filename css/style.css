@@ -309,7 +309,12 @@ button { font: inherit; cursor: pointer; }
 /* ---------- Отзывы (блок в index.html пока скрыт) ---------- */
 .section__head--row { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; max-width: none; }
 .link-more { font-weight: 700; font-size: 15px; white-space: nowrap; }
-.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+/* Лента отзывов: одна строка, листается по горизонтали (свайп, колесо с Shift, «Все отзывы →») */
+.reviews { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 6px 2px 18px; margin: -6px -2px 0; scrollbar-width: thin; scrollbar-color: var(--c-line) transparent; }
+.reviews::-webkit-scrollbar { height: 6px; }
+.reviews::-webkit-scrollbar-thumb { background: var(--c-line); border-radius: 3px; }
+.reviews:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; border-radius: 16px; }
+.reviews > .review { flex: 0 0 calc((100% - 48px) / 3); scroll-snap-align: start; }
 .review { background: #fff; border: 1px solid var(--c-line); border-radius: 16px; padding: 22px; box-shadow: 0 6px 18px rgba(18, 38, 58, .05); display: flex; flex-direction: column; }
 .review__head { display: flex; gap: 14px; align-items: center; margin-bottom: 12px; }
 .review__ava { width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center; background: var(--c-primary-soft); color: var(--c-primary-dark); font-weight: 800; font-size: 20px; }
@@ -495,6 +500,7 @@ body.modal-open { overflow: hidden; }
   .header__contact { margin-left: auto; }
 }
 @media (max-width: 1024px) {
+  .reviews > .review { flex-basis: calc((100% - 24px) / 2); }
   .form-card { max-width: 560px; width: 100%; }
   .problems { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .trust__grid { grid-template-columns: repeat(2, 1fr); }
@@ -553,7 +559,8 @@ body.modal-open { overflow: hidden; }
   .price-table td { padding: 14px 16px; font-size: 15px; }
   .price-foot { grid-template-columns: 1fr; padding: 18px; }
   .why__grid { grid-template-columns: 1fr; gap: 20px; }
-  .reviews { grid-template-columns: 1fr; gap: 16px; }
+  .reviews { gap: 16px; }
+  .reviews > .review { flex-basis: 85%; }
   .why__photo { aspect-ratio: 4 / 5; }
   .footer__top { grid-template-columns: 1fr; }
   .faq { grid-template-columns: 1fr; }

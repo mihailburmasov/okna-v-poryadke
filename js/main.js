@@ -251,6 +251,17 @@
     });
   }
 
+  /* ===== Лента отзывов: «Все отзывы →» листает на экран вперёд, в конце — к началу ===== */
+  var reviews = document.querySelector('[data-reviews]');
+  document.querySelectorAll('[data-reviews-next]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      if (!reviews) return;
+      e.preventDefault();
+      var atEnd = reviews.scrollLeft + reviews.clientWidth >= reviews.scrollWidth - 8;
+      reviews.scrollTo({ left: atEnd ? 0 : reviews.scrollLeft + reviews.clientWidth, behavior: 'smooth' });
+    });
+  });
+
   /* ===== Появление блоков при прокрутке ===== */
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {

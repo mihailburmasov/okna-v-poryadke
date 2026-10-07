@@ -518,14 +518,14 @@
      ВРЕМЕННЫЕ ОТЗЫВЫ-ЗАГЛУШКИ (написаны нами по просьбе заказчика, клиентов с такими именами нет).
      До запуска Яндекс Директа заменить реальными (Яндекс Карты, 2ГИС, Авито) с согласия клиентов:
      выдуманные отзывы — недостоверная реклама (38-ФЗ, ст. 5), их ловит модерация Директа.
-     Для реального отзыва: дату сделать ссылкой на отзыв («12 марта 2026 · Яндекс Карты»),
-     вернуть ссылку «Все отзывы →» в заголовок блока:
+     Для реального отзыва: дату сделать ссылкой на отзыв («12 марта 2026 · Яндекс Карты»).
+     «Все отзывы →» пока листает ленту (data-reviews-next в js/main.js). Когда будет страница отзывов:
      <a class="link-more" href="ССЫЛКА_НА_ВСЕ_ОТЗЫВЫ" target="_blank" rel="noopener">Все отзывы →</a> -->
 <section class="section" id="otzyvy">
   <div class="container">
-    <div class="section__head section__head--row"><h2>Отзывы наших клиентов</h2></div>
-    <div class="reviews">
-      <article class="review reveal">
+    <div class="section__head section__head--row"><h2>Отзывы наших клиентов</h2><a class="link-more" href="#otzyvy" data-reviews-next>Все отзывы →</a></div>
+    <div class="reviews reveal" data-reviews tabindex="0" aria-label="Отзывы клиентов, листаются по горизонтали">
+      <article class="review">
         <div class="review__head">
           <span class="review__ava" aria-hidden="true">М</span>
           <div><b class="review__name">Марина К.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
@@ -533,7 +533,7 @@
         <p class="review__text">Из-под створки в спальне сильно дуло. Мастер отрегулировал окна и поменял уплотнитель — стало тепло и тихо. Цену назвал до начала работ, так и заплатили.</p>
         <span class="review__date">12 сентября 2026</span>
       </article>
-      <article class="review reveal">
+      <article class="review">
         <div class="review__head">
           <span class="review__ava" aria-hidden="true">А</span>
           <div><b class="review__name">Алексей П.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
@@ -541,13 +541,77 @@
         <p class="review__text">Перестала нормально закрываться балконная дверь. Мастер нашёл причину, всё отремонтировал за один визит и убрал за собой. Рекомендую.</p>
         <span class="review__date">3 сентября 2026</span>
       </article>
-      <article class="review reveal">
+      <article class="review">
         <div class="review__head">
           <span class="review__ava" aria-hidden="true">Е</span>
           <div><b class="review__name">Елена С.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
         </div>
         <p class="review__text">Заказывала перевод окон на зимний режим и смазку фурнитуры. Всё сделали аккуратно и подсказали, как ухаживать за окнами. Спасибо!</p>
         <span class="review__date">27 августа 2026</span>
+      </article>
+      <article class="review">
+        <div class="review__head">
+          <span class="review__ava" aria-hidden="true">О</span>
+          <div><b class="review__name">Ольга Н.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+        </div>
+        <p class="review__text">На кухонном окне сломалась ручка, заодно попросила поставить москитные сетки. Мастер всё подобрал по размеру и установил за один приезд. Довольна.</p>
+        <span class="review__date">19 августа 2026</span>
+      </article>
+      <article class="review">
+        <div class="review__head">
+          <span class="review__ava" aria-hidden="true">С</span>
+          <div><b class="review__name">Сергей В.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+        </div>
+        <p class="review__text">Зимой окна в спальне сильно потели. Мастер объяснил причину, поменял уплотнитель и поставил приточный клапан. Конденсата стало заметно меньше.</p>
+        <span class="review__date">8 августа 2026</span>
+      </article>
+      <article class="review">
+        <div class="review__head">
+          <span class="review__ava" aria-hidden="true">И</span>
+          <div><b class="review__name">Ирина Д.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+        </div>
+        <p class="review__text">Створка просела и цеплялась за раму. Думала, окно придётся менять, но мастер отрегулировал фурнитуру — теперь закрывается легко.</p>
+        <span class="review__date">30 июля 2026</span>
+      </article>
+      <article class="review">
+        <div class="review__head">
+          <span class="review__ava" aria-hidden="true">Д</span>
+          <div><b class="review__name">Дмитрий Л.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+        </div>
+        <p class="review__text">Обслуживали окна у нас в офисе. Работали аккуратно, мебель накрыли, мусор забрали. Итоговая сумма совпала с согласованной до начала работ.</p>
+        <span class="review__date">22 июля 2026</span>
+      </article>
+      <article class="review">
+        <div class="review__head">
+          <span class="review__ava" aria-hidden="true">Н</span>
+          <div><b class="review__name">Наталья Г.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+        </div>
+        <p class="review__text">Дети попали мячом в окно, треснул стеклопакет. Мастер снял замеры, потом приехал и поменял пакет. Всё чисто, следов работы не осталось.</p>
+        <span class="review__date">14 июля 2026</span>
+      </article>
+      <article class="review">
+        <div class="review__head">
+          <span class="review__ava" aria-hidden="true">В</span>
+          <div><b class="review__name">Виктор Ж.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+        </div>
+        <p class="review__text">В частном доме продувало почти все окна. Сделали регулировку, смазку и заменили уплотнитель где нужно. Разница чувствуется сразу.</p>
+        <span class="review__date">2 июля 2026</span>
+      </article>
+      <article class="review">
+        <div class="review__head">
+          <span class="review__ava" aria-hidden="true">А</span>
+          <div><b class="review__name">Анна Р.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+        </div>
+        <p class="review__text">Попросила поставить детские замки на окна в детской. Мастер подсказал подходящий вариант и всё установил. Теперь спокойна за ребёнка.</p>
+        <span class="review__date">24 июня 2026</span>
+      </article>
+      <article class="review">
+        <div class="review__head">
+          <span class="review__ava" aria-hidden="true">К</span>
+          <div><b class="review__name">Константин Б.</b><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></div>
+        </div>
+        <p class="review__text">Перед сезоном проверяли окна в наших апартаментах. Мастер прошёл все номера, отрегулировал створки и заменил пару ручек. Будем обращаться ещё.</p>
+        <span class="review__date">11 июня 2026</span>
       </article>
     </div>
   </div>
