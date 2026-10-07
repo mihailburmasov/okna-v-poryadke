@@ -81,7 +81,7 @@ button { font: inherit; cursor: pointer; }
 }
 .header__inner { display: flex; align-items: center; gap: 24px; height: var(--header-h); }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--c-ink); flex-shrink: 0; }
-.logo__mark { width: 40px; height: 40px; flex-shrink: 0; }
+.logo__mark { width: 48px; height: 40px; flex-shrink: 0; }
 .logo__name { display: block; font-weight: 800; font-size: 19px; line-height: 1.1; }
 .logo__sub { display: block; font-size: 12px; color: var(--c-muted); font-weight: 600; }
 .nav { display: flex; gap: 22px; margin: 0 auto; }
@@ -98,7 +98,7 @@ button { font: inherit; cursor: pointer; }
 .header__phone-icon { color: var(--c-primary); flex-shrink: 0; margin-right: -6px; }
 .logo__mark { color: var(--c-primary); }
 .header .logo__sub { color: var(--c-primary); }
-.footer .logo__mark { color: #5fc4cc; }
+.footer .logo__mark { --logo-a: #fff; --logo-b: #5fc4cc; --logo-g: rgba(255, 255, 255, .22); }
 
 .hero {
   position: relative; overflow: hidden;
@@ -532,7 +532,7 @@ body.modal-open { overflow: hidden; }
   .section__head { margin-bottom: 28px; }
   .section__lead { font-size: 17px; }
   .header__inner { gap: 12px; }
-  .logo__mark { width: 34px; height: 34px; }
+  .logo__mark { width: 41px; height: 34px; }
   .logo__name { font-size: 17px; }
   .logo__sub { font-size: 11px; }
   .header__contact .btn { display: none; }
