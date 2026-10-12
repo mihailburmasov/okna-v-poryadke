@@ -244,6 +244,33 @@ button { font: inherit; cursor: pointer; }
 .services-more { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .chip { display: inline-block; padding: 8px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--c-line); font-size: 14px; font-weight: 600; color: var(--c-ink); }
 
+.chip--link { color: var(--c-primary-dark); border-color: var(--c-primary); text-decoration: none; }
+.chip--link:hover { background: var(--c-primary-soft); }
+
+/* ---------- Остекление под заказ ---------- */
+.glazing { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; background: var(--c-bg-soft); border-radius: 24px; padding: 28px 48px 28px 28px; }
+.glazing__photo { position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 4 / 3; }
+.glazing__photo img { width: 100%; height: 100%; object-fit: cover; }
+.glazing__price { position: absolute; left: 16px; bottom: 16px; background: #fff; color: var(--c-ink); font-weight: 800; font-size: 18px; padding: 8px 16px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,.15); }
+.glazing h2 { font-size: clamp(26px, 2.6vw, 36px); }
+.glazing__steps { list-style: none; counter-reset: gl; padding: 0; margin: 24px 0 28px; display: grid; gap: 16px; }
+.glazing__steps li { counter-increment: gl; display: grid; grid-template-columns: 28px 1fr; column-gap: 14px; }
+.glazing__steps li::before { content: counter(gl); grid-row: span 2; width: 28px; height: 28px; border-radius: 50%; background: var(--c-primary); color: #fff; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+.glazing__steps b { color: var(--c-ink); font-size: 17px; line-height: 1.3; padding-top: 3px; }
+.glazing__steps span { font-size: 15px; color: var(--c-muted); }
+.glazing__cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.glazing__note { font-size: 14px; color: var(--c-muted); margin: 0; max-width: 260px; }
+@media (max-width: 1024px) {
+  .glazing { grid-template-columns: 1fr; gap: 28px; padding: 20px 20px 32px; }
+  .glazing__photo { aspect-ratio: 16 / 10; }
+}
+@media (max-width: 720px) {
+  .glazing { padding: 12px 12px 24px; border-radius: 20px; }
+  .glazing__text { padding: 0 8px; }
+  .glazing__price { font-size: 16px; left: 12px; bottom: 12px; }
+  .glazing__cta .btn { width: 100%; }
+  .glazing__note { max-width: none; }
+}
 
 /* ---------- Квиз ---------- */
 .quiz { display: grid; grid-template-columns: 340px 1fr; background: #fff; border-radius: 24px; box-shadow: var(--shadow); overflow: hidden; }
