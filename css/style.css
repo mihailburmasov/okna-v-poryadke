@@ -121,7 +121,7 @@ button { font: inherit; cursor: pointer; }
 }
 .hero__content { position: relative; z-index: 2; max-width: 690px; }
 /* Десктоп: первый экран + полоса преимуществ занимают ровно высоту окна.
-   Высота первого экрана задаёт ширину фото (пропорции кадра 1672×941), поэтому
+   Высота первого экрана задаёт ширину фото (пропорции кадра 1280×720), поэтому
    .hero — контейнер размеров, а фото считается в cqh/cqw. Если фото при этом
    заезжает рамой под текст, сдвигаем его вправо (--shift): рама (~35% кадра)
    остаётся правее колонки текста (край контента + 690px + 40px отступа). */
@@ -132,7 +132,7 @@ button { font: inherit; cursor: pointer; }
   .hero__media { top: 0; bottom: auto; height: 100cqh; }
   .hero__media {
     --shift: max(0px, calc(max(0px, (100cqw - 1400px) / 2) + 750px - 100cqw + 100cqh * 1.155));
-    width: calc(100cqh * 1.7768); aspect-ratio: auto; right: calc(-1 * var(--shift));
+    width: calc(100cqh * 1.7778); aspect-ratio: auto; right: calc(-1 * var(--shift));
   }
   .hero__place { right: calc(28px + var(--shift)); }
 }
@@ -148,7 +148,7 @@ button { font: inherit; cursor: pointer; }
 /* фото целиком: высота = высоте экрана, ширина по пропорциям кадра.
    Левая часть (небо, море) плавно растворяется в фон — переход как в макете;
    рама окна (~35% ширины кадра) и рука остаются чёткими */
-.hero__media { position: absolute; top: 0; right: 0; bottom: 0; aspect-ratio: 1672 / 941; }
+.hero__media { position: absolute; top: 0; right: 0; bottom: 0; aspect-ratio: 1280 / 720; }
 .hero__media img {
   width: 100%; height: 100%; object-fit: cover;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.18) 14%, rgba(0,0,0,.42) 26%, rgba(0,0,0,.7) 32%, #000 35%);
