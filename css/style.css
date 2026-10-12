@@ -163,9 +163,9 @@ button { font: inherit; cursor: pointer; }
 }
 .hero__place span { color: var(--c-ink); font-size: 14px; font-weight: 600; line-height: 1.35; }
 .hero__place b { display: block; color: var(--c-primary); font-weight: 800; }
-.hero__crimea { color: #49b0ba; }
+.hero__crimea { color: #49b0ba; flex-shrink: 0; }
 .hero__note {
-  position: absolute; z-index: 3; left: calc(35% - 40px); top: 36%; margin: 0;
+  position: absolute; z-index: 3; left: calc(35% - 40px); top: 72%; margin: 0;
   font-family: "Caveat", cursive; font-weight: 600; font-size: 27px; line-height: 1.05;
   color: var(--c-primary-dark); text-align: center; transform: rotate(-10deg);
 }
@@ -377,6 +377,7 @@ button { font: inherit; cursor: pointer; }
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 12'%3E%3Cpath d='M0 6h57M51 1l6 5-6 5' fill='none' stroke='%23a9b6c4' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / auto 12px no-repeat;
 }
 .flow h3 { font-size: 16px; margin-bottom: 6px; }
+.flow__free { display: inline-block; vertical-align: 2px; margin-left: 4px; padding: 2px 9px; border-radius: 999px; background: var(--c-accent); color: #fff; font-size: 12px; font-weight: 800; letter-spacing: .02em; }
 .flow p { font-size: 14px; line-height: 1.45; color: var(--c-muted); margin: 0; }
 
 /* баннер про фурнитуру: фото справа плавно уходит в фон, как в макете */
