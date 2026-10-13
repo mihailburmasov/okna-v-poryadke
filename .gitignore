@@ -4,3 +4,6 @@ data/*.csv
 .DS_Store
 Thumbs.db
 node_modules/
+
+# Почта заказчика, токены — только на сервере (репо публичный)
+config.local.php

@@ -387,18 +387,18 @@ button { font: inherit; cursor: pointer; }
 .durability h2 .hl { color: var(--c-primary); }
 .durability__lead { font-size: 19px; color: var(--c-ink); margin-bottom: 14px; }
 .durability__note { font-size: 15px; font-weight: 700; color: var(--c-primary); margin: 0; }
-/* фото без обрезки (по пропорциям кадра), чтобы светлое пятно под подпись всегда было на месте */
-.durability__media { position: absolute; top: 0; right: 0; bottom: 0; aspect-ratio: 1274 / 410; }
+/* фото без обрезки (по пропорциям кадра), чтобы подпись всегда стояла на светлой створке */
+.durability__media { position: absolute; top: 0; right: 0; bottom: 0; aspect-ratio: 1536 / 704; }
 .durability__media img {
   width: 100%; height: 100%; object-fit: cover;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.5) 14%, #000 30%);
-          mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.5) 14%, #000 30%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.6) 8%, #000 18%);
+          mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.6) 8%, #000 18%);
 }
 .durability__hand {
-  /* центр светлого пятна на фото: 71,4% по ширине, 55% по высоте */
-  position: absolute; left: 71.4%; top: 55%; margin: 0; white-space: nowrap;
+  /* светлая нижняя часть створки: 82% по ширине, 40% по высоте; стрелка смотрит на ножницы */
+  position: absolute; left: 82%; top: 40%; margin: 0; white-space: nowrap;
   font-family: "Caveat", cursive; font-weight: 600; font-size: 30px; line-height: 1.02;
-  color: var(--c-primary-dark); text-align: center; transform: translate(-50%, -50%) rotate(-12deg);
+  color: var(--c-primary-dark); text-align: center; transform: translate(-50%, -50%) rotate(-8deg);
   text-shadow: 0 0 12px rgba(255, 255, 255, .9);
 }
 .durability__hand svg { display: block; margin: 4px 0 0 18%; color: var(--c-primary); }

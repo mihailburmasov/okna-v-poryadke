@@ -31,6 +31,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
 }
 
 $config = require __DIR__ . '/config.php';
+// Почта, токены и прочее, чего не должно быть в публичном репо, — в config.local.php (в .gitignore)
+if (is_file(__DIR__ . '/config.local.php')) {
+    $config = array_merge($config, require __DIR__ . '/config.local.php');
+}
 
 // --- Антиспам ---
 // 1. Honeypot: скрытое поле, которое люди не видят и не заполняют.
