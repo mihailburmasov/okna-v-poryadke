@@ -3,5 +3,4 @@ Disallow: /send.php
 Disallow: /spasibo.html
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid
 
-# ЗАМЕНИТЬ DOMAIN на домен сайта
-Sitemap: https://DOMAIN/sitemap.xml
+Sitemap: https://remont-okon82.ru/sitemap.xml
