@@ -4,6 +4,14 @@
 
 AddDefaultCharset UTF-8
 
+# Один адрес сайта: https и без www
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://remont-okon82.ru%{REQUEST_URI} [R=301,L]
+</IfModule>
+
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/webp "access plus 30 days"
